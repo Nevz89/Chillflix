@@ -3,10 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { PreviewComponent } from './preview/preview.component';
+import { TopNavComponent } from './top-nav/top-nav.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PreviewComponent,
+    TopNavComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
