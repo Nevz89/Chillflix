@@ -1,6 +1,6 @@
-import { IMedia } from './media.interface';
+import { IMedia } from '../models/media.interface';
 
-export const MediaList: IMedia  [] = [
+export const Media: IMedia  [] = [
     {
         name: 'back to the future',
         contentType: 'film',

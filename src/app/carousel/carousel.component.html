@@ -1,7 +1,7 @@
 <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-          <li class="list-group-item" *ngFor=" let IMedia for mediagroup ">{{IMedia}}</li> 
+          <li class="list-group-item" *ngFor=" let contentz of s.getmedia()">{{contentz.name}}</li> 
       </div>
     </div> 
   </div>

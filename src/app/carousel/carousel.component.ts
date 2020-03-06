@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { MediaList } from '../data-feed';
-import { IMedia } from '../media.interface';
+import { Media } from '../data/data-feed';
+import { IMedia } from '../models/media.interface';
+import { MediadataService } from '../shared/mediadata.service';
 
 
 @Component({
@@ -8,11 +9,9 @@ import { IMedia } from '../media.interface';
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.css']
 })
-export class CarouselComponent implements OnInit {
+export class CarouselComponent implements OnInit { 
 
-@Input() mediaGroup: IMedia [];   
-
-  constructor() { }
+  constructor(public s: MediadataService) { }
 
   ngOnInit(): void {
   }
