@@ -7,19 +7,23 @@ import { AppComponent } from './app.component';
 import { PreviewComponent } from './preview/preview.component';
 import { TopNavComponent } from './top-nav/top-nav.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { YouTubePlayerModule } from '@angular/youtube-player';
 
 @NgModule({
   declarations: [
     AppComponent,
     PreviewComponent,
     TopNavComponent,
-    CarouselComponent
+    CarouselComponent,
+    PreviewComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    YouTubePlayerModule
   ],
+  exports: [PreviewComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

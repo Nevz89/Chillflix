@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Media } from '../data/data-feed';
 import { IMedia } from '../models/media.interface';
 import { MediadataService } from '../shared/mediadata.service';
 import { Observable } from 'rxjs';
