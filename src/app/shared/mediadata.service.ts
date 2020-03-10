@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
 import { IMedia } from '../models/media.interface';
-import { Media } from '../data/data-feed';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators'
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -14,8 +13,8 @@ export class MediadataService {
   
   constructor(private client: HttpClient) { }
 
-  getmedia(): IMedia[]{
-    return this.mediadata;
+  getmedia(){ //Observable
+    return of(this.mediadata);
   }
 
   getPopularVideos(): Observable<IMedia[]> {
@@ -27,8 +26,7 @@ export class MediadataService {
     return items.map(item => {
       return {
         name: item.snippet.title,
-        description: item.snippet.publishedAt
-        //description: item.snippet.description
+        description: item.snippet.description,
       } as IMedia;
     })
   }
