@@ -8,6 +8,8 @@ import { PreviewComponent } from './preview/preview.component';
 import { TopNavComponent } from './top-nav/top-nav.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { YouTubePlayerModule } from '@angular/youtube-player';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { BreakWordPipe } from './break-word.pipe';
 
 @NgModule({
   declarations: [
@@ -15,15 +17,17 @@ import { YouTubePlayerModule } from '@angular/youtube-player';
     PreviewComponent,
     TopNavComponent,
     CarouselComponent,
-    PreviewComponent
+    PreviewComponent,
+    BreakWordPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    YouTubePlayerModule
+    YouTubePlayerModule,
+    SlickCarouselModule
   ],
-  exports: [PreviewComponent],
+  // exports: [PreviewComponent], //only needed when you need PreviewComponent in other module
   providers: [],
   bootstrap: [AppComponent]
 })

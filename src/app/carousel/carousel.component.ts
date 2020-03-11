@@ -13,15 +13,15 @@ export class CarouselComponent implements OnInit {
   //videos: any;
   videos$: Observable<any>;
 
+  slideConfig = {"slidesToShow": 4, "slidesToScroll": 4};
+
   constructor(public service: MediadataService) { }
 
   ngOnInit(): void {
-//this.service.getPopularVideos().subscribe(value =>  this.videos = value) //console.log(value));
-
-//Subscribe en in template weergeven
-
-//subscribe/unsubscribe met de async pipe in template
-this.videos$ = this.service.getPopularVideos()
+    //this.service.getPopularVideos().subscribe(value =>  this.videos = value) //console.log(value));
+    
+    //subscribe/unsubscribe met de async pipe in template
+    this.videos$ = this.service.getPopularVideos()
   }
 
 }

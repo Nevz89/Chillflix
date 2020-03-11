@@ -3,5 +3,5 @@ export interface IMedia{
     contentType: string,
     genre: string,
     price: number,
-    description: string
+    thumbURL: string
 }

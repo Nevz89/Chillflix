@@ -1,9 +1,20 @@
 <!-- {{videos$ | async | json}} -->
 
+<div class="carousel-container">
+  <ngx-slick-carousel class="carousel" 
+      #slickModal="slick-carousel" 
+      [config]="slideConfig">
+        <div ngxSlickItem *ngFor="let slide of (videos$ | async)" class="slide">
+          <img src="{{ slide.thumbURL }}" alt="" width="90%" class="m-auto">
+          <p align="center">{{ slide.name | breakWord}}</p>
+        </div>
+  </ngx-slick-carousel>
+</div>
+
 <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-          <li class="list-group-item" *ngFor=" let contentz of (videos$ | async)">{{contentz.name}} {{contentz.description}}</li> 
-      </div>
-    </div> 
-  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+        <li class="list-group-item" *ngFor=" let contentz of (videos$ | async)">{{contentz.name}} {{contentz.thumbURL}}</li> 
+    </div>
+  </div> 
+</div>
