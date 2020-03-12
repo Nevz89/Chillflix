@@ -26,6 +26,7 @@ export class MediadataService {
     return items.map(item => {
       return {
         name: item.snippet.title,
+        videoId: item.id,
         thumbURL: item.snippet.thumbnails.medium.url
         //description: item.snippet.description
       } as IMedia;

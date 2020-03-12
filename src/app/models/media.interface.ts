@@ -1,6 +1,6 @@
 export interface IMedia{
     name: string,
-    contentType: string,
+    videoId: string,
     genre: string,
     price: number,
     thumbURL: string
