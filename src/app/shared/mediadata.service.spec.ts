@@ -1,16 +1,33 @@
-import { TestBed } from '@angular/core/testing';
+import { TestBed } from "@angular/core/testing";
 
-import { MediadataService } from './mediadata.service';
+import { MediadataService } from "./mediadata.service";
+import { IMedia } from "../models/media.interface";
+import { of } from "rxjs";
 
-describe('MediadataService', () => {
+describe("MediadataService", () => {
   let service: MediadataService;
+  let httpClientSpy: { get: jasmine.Spy; post: jasmine.Spy };
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(MediadataService);
+    httpClientSpy = jasmine.createSpyObj("HttpClient", ["get", "post"]);
+
+    service = new MediadataService(<any>httpClientSpy);
   });
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
+  it("should get popular videos", () => {
+    // Arrange
+    const expectedMovieResult: any = [];
+
+    httpClientSpy.get.and.returnValue(of(expectedMovieResult));
+
+    // Act
+    service.getPopularVideos().subscribe(actualMovieResult => {
+      // Assert
+      expect(actualMovieResult).toEqual(expectedMovieResult);
+    });
   });
+
+  // it('should be created', () => {
+  //   expect(service).toBeTruthy();
+  // });
 });
