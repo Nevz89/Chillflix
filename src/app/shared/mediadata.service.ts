@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 export class MediadataService {
   private apiKey = 'AIzaSyDMCHLLEEgYQO5mNlDihx6N8nP6EP_HVPQ';
   private mediadata: IMedia[] // = Media
-  
+
   constructor(private client: HttpClient) { }
 
   getmedia(): IMedia[]{

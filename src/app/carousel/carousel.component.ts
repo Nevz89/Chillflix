@@ -9,7 +9,7 @@ import { PreviewService } from '../shared/preview.service'
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.css']
 })
-export class CarouselComponent implements OnInit { 
+export class CarouselComponent implements OnInit {
   //videos: any;
   videos$: Observable<any>;
 
