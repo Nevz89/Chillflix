@@ -10,18 +10,15 @@ import { IMedia } from '../models/media.interface';
 })
 
 export class PreviewComponent implements OnInit {
-  @Input()
-  video: IMedia;
   
- 
 
   constructor(public previewService: PreviewService) { }
 
+
+  
   ngOnInit() {
     const tag = document.createElement('script');
     tag.src = 'https://www.youtube.com/iframe_api';
     document.body.appendChild(tag);
-    this.video = this.previewService.getVideoPreview();
   }
-
 }

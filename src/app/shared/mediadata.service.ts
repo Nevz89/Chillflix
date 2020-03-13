@@ -27,8 +27,8 @@ export class MediadataService {
       return {
         name: item.snippet.title,
         videoId: item.id,
-        thumbURL: item.snippet.thumbnails.medium.url
-        //description: item.snippet.description
+        thumbURL: item.snippet.thumbnails.medium.url,
+        description: item.snippet.description
       } as IMedia;
     })
   }

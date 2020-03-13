@@ -6,14 +6,14 @@ import { IMedia } from '../models/media.interface';
 })
 
 export class PreviewService {
-  video: IMedia
+  video: IMedia;
 
   setVideoPreview(videoItem: IMedia){
-    this.video=videoItem;
+    this.video = videoItem;
   }
 
-  getVideoPreview(){
-    return this.video
+  getVideoPreview() {
+    return this.video;
   }
 
   constructor() { }
